@@ -1,6 +1,6 @@
-public class Lab9{
+public class Lab9_GUI{
   public static void main(String [] args){
-    View v = new View();
+    View_GUI v = new View_GUI();
     int key = v.getKey();
     Cipher c = new Cipher(key);
     String msg = v.getMessage();
