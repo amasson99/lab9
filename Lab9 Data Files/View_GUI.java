@@ -33,6 +33,9 @@ public class View_GUI {
 				try{
 					//key=s.nextInt();
 					key = Integer.parseInt(JOptionPane.showInputDialog("Enter a number from 0 to 25: "));
+					if(key > 25){
+						throw new NumberFormatException("Error: Input not between 0 to 25");
+					}
 				} catch (NumberFormatException e) {
 					JOptionPane.showMessageDialog(null, "Error: Input not an integer.");
 		      key = -2;
