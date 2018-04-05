@@ -12,7 +12,7 @@ public class Cipher {
 		//YOU DO THIS
 		//For each character in message
 		String encrypted="";
-		for(int i = 0; i < message.length;i++){
+		for(int i = 0; i < message.length();i++){
 			//find the character that is key values after it
 			//in the alphabet.  (If the character is 'a' and
 			//key is 4, you should find 'e'.)
@@ -33,15 +33,19 @@ public class Cipher {
 			//find the character that is key values before it
 			//in the alphabet.  (If the character is 'e' and
 			//key is 4, you should find 'a'.)
-
-			//use ASCII values to find the replacement
-
+			String decrypted="";
+			    for(int i=0;i<message.length();i++)
+			    {
+			    	int c=message.charAt(i);
+							//use ASCII values to find the replacement
+			       c=c-(key%26);
+			       if(c<'a')
+			         c=c+26;
 		//build a string of the replacement characters,
 		//and return it
-
-
-		//remove the line below when you're done
-		return "";
+		decrypted=decrypted+(char) c;
+		}//end for
+		return decrypted;
 	} // end decrypt()
 
 } // end class
